@@ -1,6 +1,6 @@
 image: 603650599990.dkr.ecr.us-east-1.amazonaws.com/jcdd/demoback
 port: 8080
 servicetype: NodePort
-replicas: 2
+replicas: 1
 name: demo-back-app
 ingressname: gateway-ingress
