@@ -41,6 +41,5 @@ spec:
   type: {{ .Values.servicetype }}
   ports:
   - port: {{ .Values.port}}
-  - targetPort: 80
   selector:
     app: {{ .Values.name}}
