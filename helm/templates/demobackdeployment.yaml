@@ -40,7 +40,7 @@ metadata:
 spec:
   type: {{ .Values.servicetype }}
   ports:
-  - port: 80
-  - targetPort: {{ .Values.port}}
+  - port: {{ .Values.port}}
+  - targetPort: 80
   selector:
     app: {{ .Values.name}}
