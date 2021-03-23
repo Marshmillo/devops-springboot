@@ -3,5 +3,4 @@ MAINTAINER jcamilodz@gmail.com
 VOLUME /tmp
 EXPOSE 8080
 ADD build/libs/\*.jar app.jar
-ENV JAVA_OPTS=""
-ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]
+ENTRYPOINT ["java","-jar","/app.jar"]
