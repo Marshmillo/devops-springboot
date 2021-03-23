@@ -28,6 +28,11 @@ node() {
             checkout scm
         }
         dir("tecnica"){
+        stage("Build") {
+            withGradle {
+                sh './gradlew assemble'
+            }
+        }
         stage("Test") {
             withGradle {
                 sh './gradlew test'
