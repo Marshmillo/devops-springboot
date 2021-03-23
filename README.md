@@ -35,3 +35,9 @@ Cuando termina de crearse la infraestructura se procede a hacer la configuració
 Se debe crear un repositorio de imagenes de contenedores que es donde se subira la imagen de docker que se generará en el pipeline.
 El pipeline esta definido en el archivo tecnica/Jenkinsfile y en la variable __ecrUri__ se debe colocar la dirección del repositorio de imagenes.
  
+### URL DEL PIPELINE
+
+http://ec2-54-82-200-161.compute-1.amazonaws.com:8080/job/Devops%20Springboot/
+
+User: lecto
+Password: password
