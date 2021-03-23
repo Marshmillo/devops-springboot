@@ -18,7 +18,7 @@ node() {
     try{
 
         
-       def ecrUri = "#############"
+       def ecrUri = "${env.ECR_REPOSITORY}"
         
         stage("Clean workspace"){
             cleanWs()
