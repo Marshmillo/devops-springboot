@@ -20,10 +20,14 @@ node() {
         
        def ecrUri = "#############"
         
+        stage("Clean workspace"){
+            cleanWs()
+        }
+
         stage("Setup"){
             checkout scm
         }
-        dir("springboot"){
+        dir("tecnica"){
         stage("Test") {
             withGradle {
                 sh './gradlew test'
