@@ -12,4 +12,4 @@ spec:
       - path: /demoback
         backend:
           serviceName: {{ .Values.name}}
-          servicePort: 80  
+          servicePort: 80
