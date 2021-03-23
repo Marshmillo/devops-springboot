@@ -20,6 +20,10 @@ node() {
         
        def ecrUri = "#############"
         
+        stage("Clean workspace"){
+            cleanWs()
+        }
+        
         stage("Setup"){
             checkout scm
         }
