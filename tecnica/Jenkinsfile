@@ -20,11 +20,8 @@ node() {
         
        def ecrUri = "603650599990.dkr.ecr.us-east-1.amazonaws.com"
         
-        stage("Clean workspace"){
-            cleanWs()
-        }
-
         stage("Setup"){
+            cleanWs()
             checkout scm
         }
 
@@ -72,7 +69,7 @@ node() {
             sh("cat ~/.kube/config")
             sh("export KUBECONFIG=~/.kube/config")
             sh("whoami")
-            sh("sudo su ec2-user && whoami && helm upgrade demoback . -v20")
+            sh("helm upgrade demoback . -v20")
             
         }
             
