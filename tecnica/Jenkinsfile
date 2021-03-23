@@ -18,7 +18,7 @@ node() {
     try{
 
         
-       def ecrUri = "603650599990.dkr.ecr.us-east-1.amazonaws.com/jcdd"
+       def ecrUri = "603650599990.dkr.ecr.us-east-1.amazonaws.com"
         
         stage("Clean workspace"){
             cleanWs()
@@ -58,7 +58,6 @@ node() {
                 }
                 
             }
-
 
         }
     
