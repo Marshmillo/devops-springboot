@@ -30,7 +30,7 @@ node() {
         dir("tecnica"){
         stage("Build") {
             withGradle {
-                sh './gradlew assemble'
+                sh './gradlew --status assemble'
             }
         }
         stage("Test") {
