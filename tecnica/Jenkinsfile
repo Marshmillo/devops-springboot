@@ -28,6 +28,11 @@ node() {
             checkout scm
         }
         dir("tecnica"){
+        stage("Re-run gradlew"){
+            withGradle {
+                sh './gradlew --stop'
+            }
+        }
         stage("Build") {
             withGradle {
                 sh './gradlew assemble'
