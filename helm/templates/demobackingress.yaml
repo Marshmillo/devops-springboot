@@ -9,7 +9,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /
+      - path: /demoback
         backend:
           serviceName: {{ .Values.name}}
           servicePort: {{ .Values.port}}   
