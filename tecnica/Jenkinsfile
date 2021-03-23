@@ -24,9 +24,14 @@ node() {
             checkout scm
         }
         dir("springboot"){
+        stage("Test") {
+            withGradle {
+                sh 'gradlew test'
+            }
+        }
         stage("Build JAR artifact") {
             withGradle {
-                sh './gradlew build'
+                sh 'gradlew build'
             }
         }
         stage("Build Docker image"){
