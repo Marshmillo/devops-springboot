@@ -23,7 +23,7 @@ spec:
           httpGet:
             path: /api/health
             port: {{ .Values.port}}
-          initialDelaySeconds: 30
+          initialDelaySeconds: 300
           periodSeconds: 10
           timeoutSeconds: 3
           failureThreshold: 1
@@ -31,7 +31,7 @@ spec:
           httpGet:
             path: /api/health
             port: {{ .Values.port}}
-          initialDelaySeconds: 60
+          initialDelaySeconds: 600
           periodSeconds: 10
           timeoutSeconds: 3
           failureThreshold: 1

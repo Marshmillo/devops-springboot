@@ -69,7 +69,7 @@ node() {
             sh("cat ~/.kube/config")
             sh("export KUBECONFIG=~/.kube/config")
             sh("whoami")
-            sh("sudo su ec2-user && whoami && PATH=/usr/local/bin:$PATH && helm install --debug demoback . -v20")
+            sh("sudo su ec2-user && whoami && PATH=/usr/local/bin:$PATH && helm upgrade --debug demoback . -v20")
             
         }
             
