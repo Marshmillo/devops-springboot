@@ -26,12 +26,12 @@ node() {
         dir("springboot"){
         stage("Test") {
             withGradle {
-                sh 'gradlew test'
+                sh 'gradle test'
             }
         }
         stage("Build JAR artifact") {
             withGradle {
-                sh 'gradlew build'
+                sh 'gradle build'
             }
         }
         stage("Build Docker image"){
