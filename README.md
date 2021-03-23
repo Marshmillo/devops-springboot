@@ -40,4 +40,5 @@ El pipeline esta definido en el archivo tecnica/Jenkinsfile y en la variable __e
 http://ec2-54-82-200-161.compute-1.amazonaws.com:8080/job/Devops%20Springboot/
 
 User: lecto
+
 Password: password
