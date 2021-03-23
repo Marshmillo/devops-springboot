@@ -61,22 +61,6 @@ node() {
 
 
         }
-        dir("helm"){
-        
-        stage("Deploy with Helm"){
-            
-            sh("echo $HOME")
-            sh("kubectl config view --raw")
-            sh("cat ~/.kube/config")
-            sh("export KUBECONFIG=~/.kube/config")
-            sh("whoami")
-            sh("sudo su ec2-user && whoami && helm upgrade demoback . -v20")
-            
-        }
-            
-
-
-        }
     
     
     } catch(error) {
