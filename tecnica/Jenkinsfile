@@ -30,17 +30,17 @@ node() {
         dir("tecnica"){
         stage("Build") {
             withGradle {
-                sh './gradlew --debug assemble'
+                sh './gradlew --debug --no-daemon assemble'
             }
         }
         stage("Test") {
             withGradle {
-                sh './gradlew test'
+                sh './gradlew --no-daemon test'
             }
         }
         stage("Build JAR artifact") {
             withGradle {
-                sh './gradlew build'
+                sh './gradlew --no-daemon build'
             }
         }
         stage("Build Docker image"){
