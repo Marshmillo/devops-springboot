@@ -27,7 +27,9 @@ node() {
         stage("Setup"){
             checkout scm
         }
+
         dir("tecnica"){
+            
         stage("Re-run gradlew"){
             withGradle {
                 sh './gradlew --stop'
@@ -58,6 +60,23 @@ node() {
                 }
                 
             }
+
+        }
+
+        dir("helm"){
+    
+        stage("Deploy with Helm"){
+            
+            sh("echo $HOME")
+            sh("kubectl config view --raw")
+            sh("cat ~/.kube/config")
+            sh("export KUBECONFIG=~/.kube/config")
+            sh("whoami")
+            sh("sudo su ec2-user && whoami && helm upgrade demoback . -v20")
+            
+        }
+            
+
 
         }
     
