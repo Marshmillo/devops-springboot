@@ -1,0 +1,30 @@
+---
+# tasks file for jenkins
+- name: Install Pre-requisitesJenkins
+  yum:
+    name:
+      - java-1.8.0-openjdk-devel
+- name: Dowload Jenkins Repo
+  get_url:
+    url: https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    dest: /etc/yum.repos.d/jenkins.repo
+- name: Import Key
+  rpm_key:
+    state: present
+    key: https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+- name: Update repos
+  yum:
+    name: '*'
+    state: latest
+- name: Install Jenkins
+  yum:
+    name:
+      - jenkins
+  notify: restart jenkins
+
+
+
+
+
+   
+   

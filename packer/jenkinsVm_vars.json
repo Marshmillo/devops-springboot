@@ -1,0 +1,9 @@
+{
+    "srcAmiId": "ami-0c94855ba95c71c99",
+    "amiName": "jenkinsVM",
+    "sshUser": "ec2-user",
+    "instanceProfile": "jenkinsProfile",
+    "subnetId": "subnet-051e8e48",
+    "vpcId": "vpc-36677b4c",
+    "vmVersion": "1.0.0"
+}
